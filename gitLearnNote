@@ -1,0 +1,35 @@
+### 重学git记录
+
+git init
+git add <filename>
+git status
+git commit -m 'comment'
+git log
+git reset --hard head^
+git reset --hard head^^
+git reset --hard versionId
+git reflog
+Working Directory
+Repository .git 
+stage/index
+first branch -> master
+HEAD 是指向master的指针
+git diff HEAD 工作区和版本库
+git checkout -- file可以丢弃工作区的修改
+	返回到最近一次git commit或git add时的状态
+
+git reset
+	命令既可以回退版本，也可以把暂存区的修改回退到工作区。当我们用HEAD时，表示最新的版本
+	
+
+new ssh key
+ssh-keygen -t rsa -C "971587718@qq.com"
+
+//本地仓库与远程仓库建立关联
+git remote add origin git@github.com:githubName/respName.git
+//将本地仓库推送到远程仓库
+git push -u origin master
+
+-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。
+//简化命令
+git push origin master
