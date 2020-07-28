@@ -33,3 +33,29 @@ git push -u origin master
 -u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。
 //简化命令
 git push origin master
+
+
+
+##分支学习
+git checkout -b dev // create & switch branch dev
+等价于 
+git branch dev
+git checkout dev
+
+git branch //view the current branch
+git checkout master //切换分支到master
+git merge dev //合并分支dev到当前分支
+git branch -d dev //删除dev分支
+
+因为checkout有两种意思 一个是撤销工作的修改 git checkout -- <filename>而是切换分支 git checkout <branch> 有歧义 新版git命令有switch
+sppport version  2.23.0
+git switch -c dev //创建并切换分支 dev 
+等价于 
+git checkout -b dev
+
+git switch dev // 切换分支到dev
+等价于
+git checkout dev 
+
+
+
